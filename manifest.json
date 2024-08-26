@@ -1,0 +1,21 @@
+{
+    "name": "log",
+    "version": "1",
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["log.js"]
+        }
+    ],
+    "background_page": "background.html",
+    "options_page": "options.html",
+    "description": "For logging and debugging in chrome console.",
+    "minimum_chrome_version" : "6",
+    "permissions":
+    [
+      "cookies",
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+    ]
+}
