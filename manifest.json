@@ -1,21 +1,16 @@
 {
     "name": "log",
     "version": "1",
-    "content_scripts": [
-        {
-            "matches": ["http://*/*", "https://*/*"],
-            "js": ["log.js"]
-        }
+    "description": "Log is a versatile tool that helps you keep track of your daily activities, accomplishments, and thoughts.",
+    "permissions": [
+        "storage"
     ],
-    "background_page": "background.html",
-    "options_page": "options.html",
-    "description": "For logging and debugging in chrome console.",
-    "minimum_chrome_version" : "6",
-    "permissions":
-    [
-      "cookies",
-      "tabs",
-      "http://*/*",
-      "https://*/*"
-    ]
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "log",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 3
 }

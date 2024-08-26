@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Log</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet" />
+    <link href="popup.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="popup-container">
+        <div class="header-container">
+            <h1>Daily Log</h1>
+        </div>
+        <div class="calendar-container">
+            <img class="calendar-buttons" id="__date_prev" src="assets/003-left-arrow.png" alt="Previous" />
+            <p id="__date"></p>
+            <input type="date" id="__datepicker" style="width: 100%; text-align: center; display: none;" />
+            <img class="calendar-buttons" id="__date_next" src="assets/004-right-arrow.png" alt="Next" />
+        </div>
+        <div class="form-container">
+            <div class="input-group">
+                <input type="text" placeholder="Enter your log here..." id="__log_input" />
+                <button type="submit" id="__log_save_button">Submit</button>
+            </div>
+        </div>
+        <div class="log-list-container" id="__log_list_container"></div>
+        <div class="no-log-item-container" id="__no_log_item">
+            <div class="no-log-item">
+                <p>No logs for this day</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>

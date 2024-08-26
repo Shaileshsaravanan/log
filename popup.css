@@ -1,0 +1,220 @@
+body {
+    min-height: 560px;
+    font-family: 'Comic Neue', cursive;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-container {
+    width: 340px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+}
+
+.header-container {
+    width: 100%;
+    background: #ff4c2c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.calendar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.calendar-container p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.calendar-buttons {
+    width: 20px;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+.input-group input[type="text"]:focus {
+    border-color: #ff4c2c;
+}
+
+.input-group button {
+    padding: 12px 18px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff4c2c;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #ff3b1b;
+}
+
+.log-list-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.log-item {
+    width: 100%;
+    background: #eeeeee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.log-item:hover {
+    background: #e0e0e0;
+}
+
+.log-date {
+    font-size: 0.8em;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.log-text {
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+#__log_list_container {
+    display: none;
+}
+
+#__no_log_item {
+    display: none;
+}
+
+.no-log-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.no-log-item {
+    width: 100%;
+}
+
+.no-log-item p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.log-actions {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.date-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input[type="date"] {
+    appearance: none;
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+input[type="date"]:focus {
+    border-color: #ff4c2c;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Scrollbar styles */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ff4c2c #ffffff;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ff4c2c;
+    border-radius: 5px;
+    border: 1px dashed #ffffff;
+}
